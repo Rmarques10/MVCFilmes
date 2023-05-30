@@ -1,4 +1,9 @@
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using MVCFilmes.Data;
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddDbContext<MVCFilmesContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("MVCFilmesContext")));
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
