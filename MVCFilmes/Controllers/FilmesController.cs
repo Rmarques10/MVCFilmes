@@ -20,15 +20,32 @@ namespace MVCFilmes.Controllers
         }
 
         // GET: Filmes
-        public async Task<IActionResult> Index(string texto)
+        public async Task<IActionResult> Index(string Texto, string Genero)
         {
+
+            IQueryable<string> generos = from m in _context.Filmes
+                                         orderby m.Genero
+                                         select m.Genero;
+
             var filmes = from m in _context.Filmes
                          select m;
-            if (!String.IsNullOrWhiteSpace(texto))
+
+            if (!String.IsNullOrWhiteSpace(Genero))
             {
-                filmes = filmes.Where(s => s.Titulo!.Contains(texto));
+                filmes = filmes.Where(s => s.Genero!.Contains(Genero));
             }
-            return View(await filmes.ToListAsync());
+
+            if (!String.IsNullOrWhiteSpace(Texto))
+            {
+                filmes = filmes.Where(s => s.Titulo!.Contains(Texto));
+            }
+
+            var filmeViewModel = new FilmesViewModel
+            {
+                Filmes = await filmes.ToListAsync(),
+                Generos = new SelectList(await generos.Distinct().ToListAsync())
+            };
+            return View(filmeViewModel);
                           
         }
 
