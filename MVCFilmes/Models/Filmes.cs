@@ -16,5 +16,8 @@ namespace MVCFilmes.Models
         [Display(Name = "Preço")]
         [Column(TypeName = "decimal(18,2)")]
         public decimal Preco { get; set; }
+
+        [Range(0,5)]
+        public int? Pontos { get; set; }
     }
 }
