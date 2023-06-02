@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "+QC9lPZsOSrZ2YIvMHU2vTDqGzsTQMGjJ1qhwMpZ1SU=",
+  "Hash": "0zohhkIXmSWqGi5MysA6TAueiNlMMqbFfhwi9mAMRwU=",
   "Source": "MVCFilmes",
   "BasePath": "_content/MVCFilmes",
   "Mode": "Default",
@@ -83,6 +83,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\Rafael Marques\\source\\repos\\MVCFilmes\\MVCFilmes\\wwwroot\\js\\jshelper-ptBR.js",
+      "SourceId": "MVCFilmes",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Rafael Marques\\source\\repos\\MVCFilmes\\MVCFilmes\\wwwroot\\",
+      "BasePath": "_content/MVCFilmes",
+      "RelativePath": "js/jshelper-ptBR.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\jshelper-ptBR.js"
     },
     {
       "Identity": "C:\\Users\\Rafael Marques\\source\\repos\\MVCFilmes\\MVCFilmes\\wwwroot\\js\\site.js",
